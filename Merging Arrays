@@ -1,0 +1,27 @@
+def mergeSorted(n:int, a: list, m: list, b: int) -> None:
+    p1 = 0
+    p2 = 0
+    
+    while(p1 < n and p2 < m):
+        if(a[p1] < b[p2]):
+            print(a[p1])
+            p1 += 1
+        else:
+            print(b[p2])
+            p2 += 1
+    
+    while(p1 < n):
+        print(a[p1])
+        p1 += 1
+    
+    while(p2 < m):
+        print(b[p2])
+        p2 += 1
+ 
+ 
+if __name__ == "__main__":
+    n,m = map(int, input().split());
+    a = list(map(int, input().split()));
+    b = list(map(int, input().split()));
+    
+    mergeSorted(n,a,m,b)
