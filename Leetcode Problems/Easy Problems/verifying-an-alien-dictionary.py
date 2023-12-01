@@ -19,6 +19,7 @@ class Solution:
         for ind in range(len(words)):
             if(words[ind] != new[ind]):
                 return False
+                
         return True
 
 
