@@ -1,12 +1,13 @@
 class Solution:
-    def reverseString(self, s: List[str], ptr = 0) -> None:
+    def reverseString(self, s: List[str], left = 0, right = -1) -> None:
         """
         Do not return anything, modify s in-place instead.
         """
-        if(ptr >= len(s)//2):
+        if(right == -1):
+            right = len(s)-1
+        if(left > right):
             return 
-
-        s[ptr], s[-1 - ptr] = s[-1 - ptr] , s[ptr]
-
-        return self.reverseString(s, ptr+1)
         
+        s[left], s[right] = s[right], s[left]
+
+        return self.reverseString(s, left + 1, right -1)
