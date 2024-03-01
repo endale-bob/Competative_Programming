@@ -7,6 +7,9 @@ class Solution:
                     result.add("".join(temp[:]))
                 return
 
+            if(open > n):
+                return
+
             temp.append("(")
             backtrack(ind+1, open+1, temp)
             temp.pop()
